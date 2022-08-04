@@ -1,0 +1,107 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     }
+     body
+     {
+          display:flex;
+          justify-content: center;
+          min-height: 8vh;
+          background-color:rgb(41, 40, 40);
+          margin-top:5rem;
+          margin-bottom: 5rem;
+     }
+     .cal
+     {
+          display: grid;
+          justify-content: center;
+         /* align-items: center;*/
+          align-content: center;
+          position: relative;
+          min-height: 400px;
+          min-width: 300px;
+          box-shadow: 25px 25px 25px 25px rgba(0,0,0,0.5),10px 10px 70px rgba(0,0,0,0.35);
+          grid-template-columns: repeat(4,90px);
+          grid-template-rows:minmax(100px,auto) repeat(5,90px);
+          inset: -5px -5px 15px rgba(0,0,0,0.7);
+          inset: -5px -5px 15px rgba(0,0,0,0.7);
+          border-radius: 23px;
+          background-color: #333;
+     }
+     .cal>button
+     {
+          color: azure;
+          place-items: center;
+          text-align: center;
+          margin: 2px;
+          position: relative;
+          display:grid;
+          background:linear-gradient(110deg,#2d2d2d,#4d4d4d);
+          font-size: 2rem;
+          cursor: pointer;
+          font-size: large;
+          outline:none;
+          font-weight: 450;
+          border-radius: 10px ;
+          user-select: none;
+          box-shadow: inset -8px 0px 8px rgba(0,0,0,0.1) ,inset 0px -8px 8px rgba(0,0,0,0.5),inset 0px 0px 3px rgba(0,0,0,0.5),inset 10px 20px 26px rgba(0, 0, 0, 0.4);
+     
+     }
+     .cal>button::before
+     {
+          content: '';
+          position:absolute;
+          top: 3px;
+          left: 3px;
+          bottom:15px;
+          right: 12px;
+          border-left:1px solid #0004;
+          border-top:1px solid #0009;
+          border-bottom:1px solid #0004;
+          box-shadow: -5px -5px 15px rgba(0,0,0,0.1),
+          10px 5px 10px rgba(0,0,0,0.5);
+     }
+     .cal>button:active
+     {
+          filter: brightness(0.8);
+     }
+     .cal>button:hover{
+          background-color: rgba(45, 47, 45, 0.9);
+     }
+     .big
+     {
+          grid-column:span 2 ;
+     }
+     #c
+     {
+          color: aliceblue;
+          background-color: red;
+          background:linear-gradient(110deg,#d80d0d,#d50000);
+     }
+     .out
+     {
+          margin:12px;
+          margin-top:15px;
+          grid-column: 1/-1;
+          padding: 10px;
+          background-color: #a7af7c;
+          border-radius: 10px;
+          text-align: right;
+          box-shadow: 0 0 2px rgba(0,0,0,0.7);
+          font-size:2rem;
+          justify-content: space-around;
+          flex-direction: column;
+          word-wrap: break-word;
+          word-break: break-all;
+     }
+     .out.pre-op
+     {
+          color:grey ;
+     }
+     .out.curr-op
+     {
+          color: black;
+     }
+     
